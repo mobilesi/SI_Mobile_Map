@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/plugin_api.dart';
+import 'package:flutter_map_animations/flutter_map_animations.dart';
 import 'package:latlong2/latlong.dart';
 
 import 'marker_data.dart';
@@ -8,12 +9,12 @@ class SimpleMapController extends ChangeNotifier {
 
   List<MarkerData>? listMarker;
 
-  final MapControllerImpl mapControllerImpl;
+  final AnimatedMapController mapControllerImpl;
 
   SimpleMapController(this.mapControllerImpl);
 
-  moveToPosition(double latitude, double longitude, {double zoom = 13.0}) {
-    mapControllerImpl.move(LatLng(latitude, longitude), zoom);
+  moveToPosition(double latitude, double longitude, {double? zoom}) {
+    mapControllerImpl.animateTo(dest: LatLng(latitude, longitude), zoom: zoom ?? mapControllerImpl.zoom);
   }
 
   updateMarkers(List<MarkerData> list) {

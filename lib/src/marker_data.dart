@@ -5,7 +5,7 @@ class MarkerData {
   final double longitude;
   final double width;
   final double height;
-  final Function? onTap;
+  final Function(double latitude, double longitude)? onTap;
 
   MarkerData(
       {required this.latitude,
