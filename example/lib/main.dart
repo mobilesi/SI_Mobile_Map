@@ -92,13 +92,36 @@ class _MyHomePageState extends State<MyHomePage> {
               longitude: 105.83679907011334,
               assetName: AppImages.icMarkerStart,
               width: 22,
-              height: 28)
+              height: 28, onTap: (lat, lon) {
+                debugPrint("hello");
+          })
         ],
+        useCluster: true,
+        clusterSize: const Size(50, 50),
+        clusterWidgetBuilder: (context, count) {
+          return Container(
+            decoration: const BoxDecoration(
+              color: Colors.blueAccent,
+              shape: BoxShape.circle
+            ),
+            alignment: Alignment.center,
+            child: Text("$count"),
+          );
+        },
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           simpleMapController.moveToPosition(21.04800248115968, 105.83679907011334);
-          simpleMapController.updateMarkers([]);
+          simpleMapController.updateMarkers([
+            MarkerData(
+                latitude: 21.04800248115968,
+                longitude: 105.83679907011334,
+                assetName: AppImages.icMarkerStart,
+                width: 22,
+                height: 28, onTap: (lat, lon) {
+              debugPrint("hello");
+            })
+          ]);
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
