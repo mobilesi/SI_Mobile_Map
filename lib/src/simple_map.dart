@@ -94,7 +94,7 @@ class _SimpleMapState extends State<SimpleMap> with TickerProviderStateMixin {
           children: [
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 3),
-              color: Colors.white,
+              // color: Colors.white,
               height: label.isNotEmpty ? 20 : 0,
               child: Text(
                 label,
