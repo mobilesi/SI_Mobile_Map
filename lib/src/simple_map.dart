@@ -153,6 +153,7 @@ class _SimpleMapState extends State<SimpleMap> with TickerProviderStateMixin {
             fitBoundsOptions: const FitBoundsOptions(
               padding: EdgeInsets.all(50),
             ),
+            disableClusteringAtZoom: 16,
             // rotate: false,
             anchor: AnchorPos.align(AnchorAlign.center),
             markers: _markerData
