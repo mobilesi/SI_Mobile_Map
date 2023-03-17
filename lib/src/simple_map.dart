@@ -124,6 +124,8 @@ class _SimpleMapState extends State<SimpleMap> with TickerProviderStateMixin {
       options: MapOptions(
         center: _current,
         zoom: widget.zoom,
+        minZoom: 5.0,
+        maxZoom: 18.0,
         interactiveFlags: InteractiveFlag.pinchZoom | InteractiveFlag.drag,
         // onMapReady: () {
         //   widget.onReady?.call(SimpleMapController(mapControllerImpl));
@@ -132,8 +134,11 @@ class _SimpleMapState extends State<SimpleMap> with TickerProviderStateMixin {
       children: [
         TileLayer(
           urlTemplate: "https://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+          // urlTemplate: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
           // userAgentPackageName: 'dev.fleaflet.flutter_map.example',
           subdomains: const ["mt0", "mt1", "mt2", "mt3"],
+          // minZoom: 10.0,
+          // maxZoom: 18.5,
         ), !widget.useCluster ?
         MarkerLayer(
           markers: _markerData
