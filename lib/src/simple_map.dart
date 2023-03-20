@@ -17,6 +17,7 @@ class SimpleMap extends StatefulWidget {
   final Size clusterSize;
   final ClusterWidgetBuilder? clusterWidgetBuilder;
   final Function? onReady;
+  final Function? mapOnTap;
 
   const SimpleMap(
       {super.key,
@@ -26,7 +27,8 @@ class SimpleMap extends StatefulWidget {
       this.onReady,
       this.useCluster = false,
       this.clusterSize = const Size(40, 40),
-      this.clusterWidgetBuilder});
+      this.clusterWidgetBuilder,
+      this.mapOnTap});
 
   @override
   State<StatefulWidget> createState() {
@@ -126,6 +128,9 @@ class _SimpleMapState extends State<SimpleMap> with TickerProviderStateMixin {
         zoom: widget.zoom,
         minZoom: 5.0,
         maxZoom: 18.0,
+        onTap: (_, LatLng point) {
+          widget.mapOnTap?.call(point.latitude, point.longitude);
+        },
         interactiveFlags: InteractiveFlag.pinchZoom | InteractiveFlag.drag,
         // onMapReady: () {
         //   widget.onReady?.call(SimpleMapController(mapControllerImpl));
