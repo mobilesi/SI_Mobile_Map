@@ -1,4 +1,16 @@
 # SI Map
+A versatile mapping package for Flutter, based off of 'flutter_map'.
+
+<table width="100%" cellspacing="0" cellpadding="0" rules="none">
+  <tr>
+    <td align="center">Android</td>
+     <td align="center">iOS</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="doc/screenshots/android.jpg" width="50%"></td>
+    <td align="center"><img src="doc/screenshots/ios.png" width="50%"></td>
+  </tr>
+ </table>
 
 ## Usage
 To use this plugin, add `si_map` as a [dependency in your pubspec.yaml file](https://flutter.dev/docs/development/packages-and-plugins/using-packages).
@@ -49,17 +61,6 @@ SimpleMap(
   },
 )
 ```
-
-<table width="100%" cellspacing="0" cellpadding="0" rules="none">
-  <tr>
-    <td align="center">Android</td>
-     <td align="center">iOS</td>
-  </tr>
-  <tr>
-    <td align="center"><img src="doc/screenshots/android.jpg" width="50%"></td>
-    <td align="center"><img src="doc/screenshots/ios.png" width="50%"></td>
-  </tr>
- </table>
 
 [comment]: <> (Android                    |  iOS)
 
