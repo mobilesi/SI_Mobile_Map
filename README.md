@@ -1,4 +1,4 @@
-# SI Map
+# SI Mobile Map
 A versatile mapping package for Flutter, based off of 'flutter_map'.
 
 <table width="100%" cellspacing="0" cellpadding="0" rules="none">
