@@ -1,9 +1,5 @@
 # SI Map
 
-[![pub package](https://img.shields.io/pub/v/simple_setting.svg)](https://pub.dev/packages/simple_setting)
-
-A package for internationalizing flutter apps by simple way.
-
 ## Usage
 To use this plugin, add `si_map` as a [dependency in your pubspec.yaml file](https://flutter.dev/docs/development/packages-and-plugins/using-packages).
 
@@ -53,6 +49,29 @@ SimpleMap(
   },
 )
 ```
+
+<table width="100%" cellspacing="0" cellpadding="0" rules="none">
+  <tr>
+    <td align="center">Android</td>
+     <td align="center">iOS</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="doc/screenshots/android.jpg" width="50%"></td>
+    <td align="center"><img src="doc/screenshots/ios.png" width="50%"></td>
+  </tr>
+ </table>
+
+[comment]: <> (Android                    |  iOS)
+
+[comment]: <> (:-------------------------:|:-------------------------:)
+
+[comment]: <> (![]&#40;https://raw.githubusercontent.com/mobilesi/si_map/task%23update-readme/doc/screenshots/android.jpg&#41;  |  ![]&#40;https://raw.githubusercontent.com/mobilesi/si_map/task%23update-readme/doc/screenshots/ios.png&#41;)
+
+[comment]: <> (<img src="https://raw.githubusercontent.com/mobilesi/si_map/master/doc/screenshots/android.jpg" alt="SIMap - Example Android" width="400" />)
+
+[comment]: <> (<img src="https://raw.githubusercontent.com/mobilesi/si_map/master/doc/screenshots/ios.png" alt="SIMap - Example iOS" width="400" />)
+
+[comment]: <> (<br>)
 
 ### Step 3
 When you want to move to the position on map:
